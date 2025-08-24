@@ -36,8 +36,8 @@
 
 ;; Font & Cursor
 (set-face-attribute 'default nil
-                    :family "Jetbrains Mono"
-                    :height 110
+                    :family "JetBrains Mono"
+                    :height 125
                     :weight 'normal)
 (blink-cursor-mode -1)
 (global-hl-line-mode 1)
@@ -123,6 +123,7 @@
 (bind-key* "C-x C-SPC"    'pop-to-mark-command)
 (bind-key* "C-x C-<up>"   'flymake-goto-prev-error)
 (bind-key* "C-x C-<down>" 'flymake-goto-next-error)
+
 ;; (bind-key* "<escape>"     'god-mode-all)
 (windmove-default-keybindings)                       ;; Shift+arrows to switch windows
 
@@ -150,6 +151,9 @@
 
 (load-theme 'doom-gruvbox t)  ;; Load theme early to avoid flicker
 
+(set-frame-parameter nil 'alpha-background 90) ; For current frame
+(add-to-list 'default-frame-alist '(alpha-background . 90)) ; For all new frames henceforth
+
 ;; ======================
 ;; Final Startup Tweaks
 ;; ======================
@@ -167,7 +171,18 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0)
  '(custom-safe-themes
-   '("d2ab3d4f005a9ad4fb789a8f65606c72f30ce9d281a9e42da55f7f4b9ef5bfc6"
+   '("3f24dd8f542f4aa8186a41d5770eb383f446d7228cd7a3413b9f5e0ec0d5f3c0"
+     "fffef514346b2a43900e1c7ea2bc7d84cbdd4aa66c1b51946aade4b8d343b55a"
+     "e4a441d3cea911e8ef36de2eaed043cbe2079484c44c3f2bbab67a46f863a9f6"
+     "1bc640af8b000ae0275dbffefa2eb22ec91f6de53aca87221c125dc710057511"
+     "a368631abdadffb6882f9994637d7216167912311447f1ec02f9dc58e9cc62a9"
+     "72d9086e9e67a3e0e0e6ba26a1068b8b196e58a13ccaeff4bfe5ee6288175432"
+     "19d62171e83f2d4d6f7c31fc0a6f437e8cec4543234f0548bad5d49be8e344cd"
+     "e4d4cc443964b8a64defc06de3edb2363f7cb1b3c3ae2272b2c1487f626e4318"
+     "088cd6f894494ac3d4ff67b794467c2aa1e3713453805b93a8bcb2d72a0d1b53"
+     "9b9d7a851a8e26f294e778e02c8df25c8a3b15170e6f9fd6965ac5f2544ef2a9"
+     "f1e8339b04aef8f145dd4782d03499d9d716fdc0361319411ac2efc603249326"
+     "d2ab3d4f005a9ad4fb789a8f65606c72f30ce9d281a9e42da55f7f4b9ef5bfc6"
      "c20728f5c0cb50972b50c929b004a7496d3f2e2ded387bf870f89da25793bb44"
      "daa27dcbe26a280a9425ee90dc7458d85bd540482b93e9fa94d4f43327128077"
      "8d3ef5ff6273f2a552152c7febc40eabca26bae05bd12bc85062e2dc224cde9a"
@@ -194,10 +209,8 @@
      "21eb44ad0e958f71261c436a06577dc114b2850e5a82bc12314cf63c2d2d1db5"
      default))
  '(package-selected-packages
-   '(cmake-mode company corfu disable-mouse doom-themes eglot eldoc-box
-                glsl-mode go-mode god-mode goto-chg kanagawa-themes
-                kaolin-themes load-relative loc-changes lua-mode
-                rust-mode test-simple typescript-mode vertico web-mode)))
+   '(corfu disable-mouse doom-themes eldoc-box go-mode kanagawa-themes
+           kaolin-themes typescript-mode vertico)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
