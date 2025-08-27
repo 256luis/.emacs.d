@@ -151,8 +151,8 @@
 
 (load-theme 'doom-gruvbox t)  ;; Load theme early to avoid flicker
 
-(set-frame-parameter nil 'alpha-background 90) ; For current frame
-(add-to-list 'default-frame-alist '(alpha-background . 90)) ; For all new frames henceforth
+(set-frame-parameter nil 'alpha-background 85) ; For current frame
+(add-to-list 'default-frame-alist '(alpha-background . 85)) ; For all new frames henceforth
 
 ;; ======================
 ;; Final Startup Tweaks
@@ -208,9 +208,7 @@
      "452068f2985179294c73c5964c730a10e62164deed004a8ab68a5d778a2581da"
      "21eb44ad0e958f71261c436a06577dc114b2850e5a82bc12314cf63c2d2d1db5"
      default))
- '(package-selected-packages
-   '(corfu disable-mouse doom-themes eldoc-box go-mode kanagawa-themes
-           kaolin-themes typescript-mode vertico)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
