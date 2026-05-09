@@ -47,9 +47,6 @@
 ;; theme
 (load-theme 'gruvbox-black t)
 
-;; font
-(set-frame-font "SF Mono Medium-11" nil t)
-
 ;; cursor
 (blink-cursor-mode -1)
 (global-hl-line-mode 1)

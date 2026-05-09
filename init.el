@@ -62,6 +62,9 @@
 
 (setq compile-command "build")
 
+;; font
+(set-frame-font "SF Mono Medium-11" nil t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
