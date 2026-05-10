@@ -44,9 +44,6 @@
 (setq scroll-margin 3
       scroll-conservatively 101)
 
-;; theme
-(load-theme 'gruvbox-black t)
-
 ;; cursor
 (blink-cursor-mode -1)
 (global-hl-line-mode 1)
