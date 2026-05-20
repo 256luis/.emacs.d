@@ -37,7 +37,7 @@
  '(font-lock-builtin-face ((((class color) (min-colors 257)) (:foreground "#fe8019")) (((class color) (min-colors 256)) (:foreground "#fd971f")) (((class color) (min-colors 16)) (:foreground "orange"))))
  '(font-lock-bracket-face ((t (:inherit font-lock-punctuation-face))))
  '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
- '(font-lock-comment-face ((((class color) (min-colors 257)) (:foreground "#b16286")) (((class color) (min-colors 256)) (:foreground "#b16286")) (((class color) (min-colors 16)) (:foreground "magenta"))))
+ '(font-lock-comment-face ((t (:foreground "#b16286" :slant italic))))
  '(font-lock-constant-face ((((class color) (min-colors 257)) (:foreground "#d3869b")) (((class color) (min-colors 256)) (:foreground "#d3869b")) (((class color) (min-colors 16)) (:foreground "brightmagenta"))))
  '(font-lock-doc-face ((((class color) (min-colors 257)) (:inherit font-lock-comment-face :foreground "#c0819e")) (((class color) (min-colors 256)) (:inherit font-lock-comment-face :foreground "#c0819e")) (((class color) (min-colors 16)) (:inherit font-lock-comment-face :foreground "magenta"))))
  '(font-lock-delimiter-face ((t (:inherit font-lock-punctuation-face))))

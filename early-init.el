@@ -36,10 +36,13 @@
 (setq ring-bell-function 'ignore) ;; Disable bell sound
 (transient-mark-mode -1)          ;; Disable transient mark mode
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'prog-mode-hook (lambda()
+(add-hook 'prog-mode-hook (lambda ()
                             (eglot-ensure)
                             (corfu-mode)))
-
+(add-hook 'eshell-mode-hook (lambda ()
+                              (face-remap-add-relative 'default
+                                                       :foreground "gray90"
+                                                       :weight 'normal)))
 ;; Scrolling
 (setq scroll-margin 3
       scroll-conservatively 101)

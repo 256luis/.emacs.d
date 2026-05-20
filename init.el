@@ -66,14 +66,25 @@
 (setq compile-command "build")
 
 ;; font
-(set-frame-font "SF Mono Semibold-11" nil t)
+(set-frame-font "SF Mono SemiBold-11" nil t)
+;; (set-face-attribute 'default nil
+;;                     :font "Jetbrains Mono"
+;;                     :height 110
+;;                     :weight 'medium)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("3256de838b9c689f474b02fa2928513999e96cc2d0d13be0c79ee969def7852a"
+   '("4dfde675e820b3ce4eeeeea7510328003c44a5d3832df9eccf55229984d0699c"
+     "81e4d6a08e755b7716c692e7fb4e424808bf163fc8212d7cc9c005264be8d1b6"
+     "8bb531d5bf1b5eeaa4cff6651648687eeb9581dcadb8ba91dd4413963fedb2eb"
+     "039112154ee5166278a7b65790c665fe17fd21c84356b7ad4b90c29ffe0ad606"
+     "2902694c7ef5d2a757146f0a7ce67976c8d896ea0a61bd21d3259378add434c4"
+     "50335303d5af676cd0c2eff01ccbb09592b12b58d1cd90bcb5b28f0a5753ee73"
+     "3256de838b9c689f474b02fa2928513999e96cc2d0d13be0c79ee969def7852a"
      "27efdd7b56f7b35c02bc63e818dace69e6cf34832f6024e409a659998a9db7f4"
      "bfb82b263be2893fd00de7cce58dd5ca26f02ae5c411affde1d47ef3ca85ffe1"
      "f21e36f7955f5615e84c40009f916898690e48e0b01d2d5def6c28e9b17fb3d3"
