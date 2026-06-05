@@ -1,8 +1,5 @@
 ;; -*- lexical-binding: t; -*-
 
-(add-to-list 'load-path "c:/dev/emacs-eat")
-
-
 (setq gc-cons-threshold most-positive-fixnum)  ;; Defer GC during startup
 (setq package-enable-at-startup nil)           ;; Prevent double initialization
 (setq frame-inhibit-implied-resize t)          ;; Faster frame creation
