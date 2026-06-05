@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (deftheme gruvbox-black
   "My variant of gruvbox. Used doom-gruvbox as base then tweaked to my tastes.")
 
@@ -318,9 +320,9 @@
  '(diff-header ((((class color) (min-colors 257)) (:foreground "#8ec07c")) (((class color) (min-colors 256)) (:foreground "#8ec07c")) (((class color) (min-colors 16)) (:foreground "brightcyan"))))
  '(diff-file-header ((((class color) (min-colors 257)) (:foreground "#83a598")) (((class color) (min-colors 256)) (:foreground "#83a598")) (((class color) (min-colors 16)) (:foreground "brightblue"))))
  '(diff-hunk-header ((((class color) (min-colors 257)) (:foreground "#d3869b")) (((class color) (min-colors 256)) (:foreground "#d3869b")) (((class color) (min-colors 16)) (:foreground "brightmagenta"))))
- '(diff-indicator-added ((((class color) (min-colors 257)) (:foreground "#9c9e20")) (((class color) (min-colors 256)) (:foreground "#9c9e20")) (((class color) (min-colors 16)) (:foreground "green"))))
+ '(diff-indicator-added ((t (:background "#002400"))))
  '(diff-indicator-changed ((((class color) (min-colors 257)) (:foreground "#78a369")) (((class color) (min-colors 256)) (:foreground "#78a369")) (((class color) (min-colors 16)) (:foreground "brightcyan"))))
- '(diff-indicator-removed ((((class color) (min-colors 257)) (:foreground "#d53e2c")) (((class color) (min-colors 256)) (:foreground "#c44032")) (((class color) (min-colors 16)) (:foreground "red"))))
+ '(diff-indicator-removed ((t (:background "#2e0000"))))
  '(diff-refine-added ((t (:inherit diff-added :inverse-video t))))
  '(diff-refine-changed ((t (:inherit diff-changed :inverse-video t))))
  '(diff-refine-removed ((t (:inherit diff-removed :inverse-video t))))
