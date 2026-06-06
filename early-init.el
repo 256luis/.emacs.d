@@ -5,8 +5,8 @@
 (setq frame-inhibit-implied-resize t)          ;; Faster frame creation
 
 (require 'package)
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("gnu" . "https://elpa.gnu.org/packages/")
+(setq package-archives '(("melpa"  . "https://melpa.org/packages/")
+                         ("gnu"    . "https://elpa.gnu.org/packages/")
                          ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
 (package-initialize)
 
@@ -38,12 +38,9 @@
 (setq ring-bell-function 'ignore) ;; Disable bell sound
 (transient-mark-mode -1)          ;; Disable transient mark mode
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'eshell-mode-hook (lambda ()
-                              (face-remap-add-relative 'default
-                                                       :foreground "gray90"
-                                                       :weight 'normal)))
+
 ;; Scrolling
-(setq scroll-margin 0
+(setq scroll-margin 3
       scroll-conservatively 101)
 
 ;; cursor
@@ -63,7 +60,27 @@
 (use-package vertico
   :ensure t
   :config
+  (setq vertico-count 10)
   (vertico-mode 1))
+
+(use-package marginalia
+  :ensure t
+  :config
+  (marginalia-mode 1))
+
+(use-package vertico-posframe
+  :ensure t
+  :config
+  (setq vertico-posframe-border-width 20)
+  (setq vertico-posframe-width nil)
+  (setq vertico-posframe-min-height nil)
+  (setq vertico-posframe-poshandler 'posframe-poshandler-frame-center)
+  (setq vertico-posframe-font "Jetbrains Mono-11")
+  (set-face-attribute 'vertico-posframe-border nil
+                      :background "grey4")
+  (set-face-attribute 'vertico-posframe nil
+                      :background "grey4")
+  (vertico-posframe-mode 1))
 
 (use-package eglot
   :config
@@ -74,6 +91,14 @@
   (prog-mode . eglot-ensure))
 (setq eglot-sync-connect 0)
 
+(use-package sideline-flymake
+  :ensure t
+  :hook
+  (flymake-mode . sideline-mode)
+  :init
+  (setq sideline-flymake-display-mode 'line)
+  (setq sideline-backends-right '(sideline-flymake)))
+
 (use-package corfu
   :ensure t
   :init
@@ -83,15 +108,6 @@
   (setq corfu-auto-delay 0.1)
   :hook
   (prog-mode . corfu-mode))
-
-(use-package dashboard
-  :ensure t
-  :config
-  (setq initial-buffer-choice 'dashboard-open)
-  (setq dashboard-startup-banner 2)
-  (setq dashboard-center-content t)
-  (setq dashboard-vertically-center-content t)
-  (setq dashboard-items '((projects  . 5))))
 
 ;; custom keybinds
 (bind-key* "C-d"          'delete-region) ;; delete region without copying
